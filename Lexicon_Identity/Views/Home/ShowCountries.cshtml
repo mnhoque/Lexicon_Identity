@@ -1,0 +1,29 @@
+﻿@model List<Country>
+@{
+    ViewData["Title"] = "ShowCountries";
+}
+
+<h1>ShowCountries</h1>
+
+<div>
+
+<table border="1">
+    <tr>
+        <th>
+            CustomerCode
+        </th>
+        <th>
+            CustomerId
+        </th>
+    </tr>
+
+    @foreach (var row in Model)
+    {
+        <tr>
+            <th>@row.Country_Id<br /></th>
+            <th>@row.Country_Name<br /></th>
+        </tr>
+    }
+
+</table>
+    </div>
