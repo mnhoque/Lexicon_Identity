@@ -79,6 +79,15 @@ namespace Lexicon_Identity.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "b78c79e4-9a4d-463a-ae7f-0de96dc01a54",
+                            ConcurrencyStamp = "b78c79e4-9a4d-463a-ae7f-0de96dc01a54",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -279,6 +288,26 @@ namespace Lexicon_Identity.Migrations
                         .HasFilter("[CountryId] IS NOT NULL");
 
                     b.HasDiscriminator().HasValue("AppUser");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "a92d2047-adfe-49f1-98fd-e375f69050e1",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "54a52f94-c5a2-4961-9a7c-4b088fb7cf61",
+                            Email = "admin@admin.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@ADMIN.COM",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEM3WMyU96K79tk6rUB3jjQdYijMsLFztPeL7DL3T3f9MT2CjyeJqt/I9bKigT7TutQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "82c1d870-684c-4170-9a65-458b7b102358",
+                            TwoFactorEnabled = false,
+                            UserName = "Admin",
+                            CityId = 1,
+                            CountryId = 0
+                        });
                 });
 
             modelBuilder.Entity("Lexicon_Identity.Models.City", b =>

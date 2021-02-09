@@ -13,7 +13,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Lexicon_Identity.Models;
-using System.ComponentModel;
 
 namespace Lexicon_Identity
 {
@@ -32,7 +31,7 @@ namespace Lexicon_Identity
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<AppUser, IdentityRole>();
+            //services.AddIdentity<AppUser, IdentityRole>();
             //        .AddClaimsPrincipalFactory<UserClaimsPrincipalFactory<AppUser, IdentityRole>>()
             //        .AddEntityFrameworkStores<ApplicationDbContext>()
             //        .AddDefaultTokenProviders()
@@ -47,9 +46,8 @@ namespace Lexicon_Identity
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)//IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            
 
             if (env.IsDevelopment())
             {

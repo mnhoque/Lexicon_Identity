@@ -37,8 +37,8 @@ namespace Lexicon_Identity.Data
             {
                 Id = userId,
                 //UserName= admin@admin.com,
-                Email = "admin@admin.com",
-                NormalizedEmail = "ADMIN@ADMIN.COM",
+                Email = "pari.sai@lexeon.com",
+                NormalizedEmail = "pari.sai@lexeon.com",
                 EmailConfirmed = true,
                 UserName = "Admin",
                 NormalizedUserName = "ADMIN",
@@ -58,7 +58,7 @@ namespace Lexicon_Identity.Data
 
 
 
-            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string> { RoleId = roleId, UserId = userId });
+            //modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string> { RoleId = roleId, UserId = userId });
             modelBuilder.Entity<Country>()
                 .HasMany<City>(Country => Country.Cities)
                 .WithOne(City => City.Country)
